@@ -6,7 +6,11 @@ const HomePage = lazy(() =>
 );
 
 const LifeCyclePage = lazy(() =>
-  import(/* webpackChunkName: "LifeCycle.page" */ './pages/LifeCyclePage')
+  import(/* webpackChunkName: "LifeCycle1.page" */ './pages/LifeCyclePage1')
+);
+
+const LifeCycleHookPage = lazy(() =>
+  import(/* webpackChunkName: "LifeCycle2.page" */ './pages/LifeCyclePage2')
 );
 
 const Tutorial1Page = lazy(() =>
@@ -37,6 +41,10 @@ const routes = [
   {
     path: '/lifecycle',
     component: renderPageComponent(LifeCyclePage),
+  },
+  {
+    path: '/lifecycle-hook',
+    component: renderPageComponent(LifeCycleHookPage),
   },
   {
     path: '/tutorial-1',
